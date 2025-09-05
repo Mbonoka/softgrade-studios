@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Not Yet Ready</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+    }
+    p {
+      font-size: 1.125rem;
+      color: #4a5568;
+      margin: 1rem 0;
+      max-width: 600px;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #7e22ce;
+    }
+    video {
+      max-width: 300px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 640px) {
+      p {
+        font-size: 1rem;
+      }
+      video {
+        max-width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay loop muted playsinline aria-label="Construction video indicating page not ready">
+    <source src="Coding.mp4" type="video/mp4">
+  </video>
+  <p>We're still working on this feature. Check back soon for exciting updates!</p>
+  <a href="index.html">Return to Home</a>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Softgrade Studios</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const Header = () => (
+      <header className="bg-gray-900 text-white p-6 sticky top-0 z-10 shadow-lg">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="text-2xl font-extrabold hover:text-teal-300 transition duration-300">
+            Softgrade Studios
+          </div>
+          <nav className="space-x-6">
+            <a href="#" className="hover:text-teal-300 transition duration-300 font-semibold">Home</a>
+            <a href="#" className="hover:text-teal-300 transition duration-300 font-semibold">Services</a>
+            <a href="#" className="hover:text-teal-300 transition duration-300 font-semibold">Contact</a>
+          </nav>
+        </div>
+      </header>
+    );
+
+    const Hero = () => (
+      <section className="bg-gradient-to-r from-teal-500 to-purple-600 text-white py-24 relative">
+        <div className="container mx-auto text-center px-4">
+          <lottie-player 
+            className="absolute top-0 left-0 w-full h-full opacity-20 z-0"
+            src="https://lottie.host/3e4a1f2b-8d9e-4f1a-b5c2-7d8e9f0a1b2c/L6Kx7m8n9p.json" 
+            background="transparent" 
+            speed="1" 
+            loop 
+            autoplay
+            aria-label="Coding animation background"
+          ></lottie-player>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in-up">Welcome to Softgrade Studios</h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+            Unleash your creativity with innovative design solutions tailored to elevate your brand.
+          </p>
+          <a href="page2.html">
+            <button className="bg-white text-teal-600 px-8 py-4 rounded-full font-bold text-lg shadow-md hover:bg-teal-100 hover:shadow-lg transition duration-300 transform hover:scale-105">
+              Get Started
+            </button>
+          </a>
+        </div>
+      </section>
+    );
+
+    const App = () => (
+      <div>
+        <Header />
+        <Hero />
+      </div>
+    );
+
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 1.2s ease-out;
+      }
+      @media (max-width: 640px) {
+        nav { display: none; }
+        h1 { font-size: 2.5rem; }
+        p { font-size: 1.125rem; }
+        button { padding: 0.75rem 1.5rem; font-size: 1rem; }
+      }
+    `;
+    document.head.appendChild(style);
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</html>
