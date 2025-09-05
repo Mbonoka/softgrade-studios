@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/babel-standalone@6.26.0/babel.min.js"></script>
 </head>
+
 <body>
   <div id="root"></div>
   <script type="text/babel">
@@ -28,23 +30,27 @@
     );
 
     const Hero = () => (
-      <section className="bg-gradient-to-r from-teal-500 to-purple-600 text-white py-24 relative">
-        <div className="container mx-auto text-center px-4">
-          <lottie-player 
-            className="absolute top-0 left-0 w-full h-full opacity-20 z-0"
-            src="https://lottie.host/3e4a1f2b-8d9e-4f1a-b5c2-7d8e9f0a1b2c/L6Kx7m8n9p.json" 
-            background="transparent" 
-            speed="1" 
-            loop 
-            autoplay
-            aria-label="Coding animation background"
-          ></lottie-player>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in-up">Welcome to Softgrade Studios</h1>
+      <section className="relative text-white py-24 h-screen flex items-center justify-center overflow-hidden bg-blue-600">
+        {/* Lottie Background Wallpaper */}
+        <lottie-player
+          className="absolute inset-0 w-full h-full object-cover opacity-70 -z-10"
+          src="https://lottie.host/d12158de-44c9-4079-b980-3bf63694f918/VrgZppaPQ8.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
+
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in-up">
+            Welcome to Softgrade Studios
+          </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
             Unleash your creativity with innovative design solutions tailored to elevate your brand.
           </p>
           <a href="page2.html">
-            <button className="bg-white text-teal-600 px-8 py-4 rounded-full font-bold text-lg shadow-md hover:bg-teal-100 hover:shadow-lg transition duration-300 transform hover:scale-105">
+            <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-md hover:bg-blue-100 hover:shadow-lg transition duration-300 transform hover:scale-105">
               Get Started
             </button>
           </a>
@@ -59,6 +65,7 @@
       </div>
     );
 
+    // Animation styles
     const style = document.createElement('style');
     style.textContent = `
       @keyframes fade-in-up {
@@ -81,4 +88,5 @@
   </script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
+
 </html>
